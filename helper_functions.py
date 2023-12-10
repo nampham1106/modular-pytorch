@@ -100,7 +100,7 @@ def pred_and_plot_image(
     transform=None,
     device:torch.device="cuda" if torch.cuda.is_available() else "cpu"
 ):
-    ttarget_image = torchvision.io.read_image(str(image_path)).type(torch.float32)
+    target_image = torchvision.io.read_image(str(image_path)).type(torch.float32)
 
     target_image = target_image / 255.0
 
