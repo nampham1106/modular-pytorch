@@ -10,7 +10,7 @@ def train_step(model: torch.nn.Module,
                device: torch.device) -> Tuple[float, float]:
     model.train()
     train_loss, train_acc = 0, 0
-    for batch, (x, y) in enumerate(dataloader):
+    for batch, (X, y) in enumerate(dataloader):
         X, y = X.to(device), y.to(device)
         
         y_pred_logits = model(X)
